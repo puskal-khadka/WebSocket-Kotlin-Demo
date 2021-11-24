@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingHorizontal="8dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="WebSocket in android with Kotlin + okhttp"
+        android:layout_marginVertical="16dp"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:id="@+id/tv1"
+        />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvStatus"
+        android:text="Status: Not Connected"
+        android:layout_below="@+id/tv1"
+        />
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnConnect"
+        android:text="Connect to Web Socket"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_gravity="center_horizontal"
+        android:padding="10dp"
+        app:cornerRadius="16dp"
+        android:textAllCaps="false"
+        android:layout_marginTop="16dp"
+        android:layout_below="@id/tvStatus"
+        />
+
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Send Message to Socket"
+            android:layout_weight="1"
+            android:layout_marginEnd="22dp"
+            android:id="@+id/etSendMsg"
+            android:layout_below="@id/btnConnect"
+            android:layout_toLeftOf="@+id/btnSendMsg"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="8dp"
+            android:visibility="gone"
+            tools:visibility="visible"
+            />
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnSendMsg"
+            android:text="Send"
+            android:layout_gravity="center_horizontal"
+            android:padding="0dp"
+            app:cornerRadius="20dp"
+            android:textAllCaps="false"
+            android:layout_alignTop="@id/etSendMsg"
+            android:layout_alignParentEnd="true"
+            android:visibility="gone"
+            tools:visibility="visible"
+            />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv6"
+        android:text="Received:"
+        android:textStyle="bold"
+        android:layout_below="@+id/etSendMsg"
+        android:layout_marginTop="12dp"
+        android:visibility="gone"
+        tools:visibility="visible"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvReplyMsg"
+        android:text="Hello, dear"
+        android:layout_alignTop="@id/tv6"
+        android:layout_toRightOf="@+id/tv6"
+        android:layout_marginStart="5dp"
+        android:visibility="gone"
+        tools:visibility="visible"
+        />
+
+
+
+
+
+
+
+</RelativeLayout>
